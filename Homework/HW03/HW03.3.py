@@ -18,9 +18,9 @@ def main():
         if hour < 0 or min < 0 or sec < 0:
             break
         print("Input time : ({}:{}:{})".format(str(hour).zfill(2), str(min).zfill(2), str(sec).zfill(2)))
-        elapsedSec = sec
-        elapsedSec += min * 60
-        elapsedSec += hour * 3600
+        elapsedSec = sec                # add sec
+        elapsedSec += min * 60          # add min
+        elapsedSec += hour * 3600       # add hour
         print("Elapsed seconds from last midnight = {}".format(elapsedSec))
         print("Remaining seconds to next-midnight = {}".format(86400 - elapsedSec))
 

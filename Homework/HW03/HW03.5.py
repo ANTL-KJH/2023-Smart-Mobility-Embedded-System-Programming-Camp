@@ -24,28 +24,28 @@ def main():
     line_length = int(input("line_length of star : "))
     line_color = input("line_color of star (e.g., red, blue) = ")
     t.pencolor(line_color)
-    t.dot(10, "red");
+    t.dot(10, "red")
     t.write(t.pos())
-    t.up();
-    t.goto(center);
+    t.up()
+    t.goto(center)
     t.down()
-    t.dot(10, "blue");
+    t.dot(10, "blue")
     t.write(center)
     start_x = center_x - line_length / 2
     theta = math.radians(360 / num_vertices)  # convert angle in degree into angle in radian
     h = line_length / (2 * math.tan(theta))
     start_y = center_y + h
     t.width(5)
-    t.penup();
-    t.goto(start_x, start_y);
+    t.penup()
+    t.goto(start_x, start_y)
     t.dot(10, "blue")
-    t.write((start_x, start_y));
+    t.write((start_x, start_y))
     t.pendown()  # pen down to draw
     for i in range(num_vertices):
         t.forward(line_length)
         t.right(2 * 360 / num_vertices)
-    t.up();
-    t.goto(center);
+    t.up()
+    t.goto(center)
     t.down()
     turtle.exitonclick()
 

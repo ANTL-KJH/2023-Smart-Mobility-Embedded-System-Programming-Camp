@@ -13,7 +13,7 @@
 
 def main():
     string = input("input c1 (in complex, re + imj): ")
-    string = string[1:len(string)-2]
+    string = string[1:len(string)-2]        # remove (, j)
     real, imag = map(int, string.split(sep="+"))
     c1 = complex(real, imag)
     print("c1 = {}".format(c1))

@@ -12,13 +12,17 @@
 """
 
 def main():
+    # print template
     for i in range(0, 50):
         print("=", end="")
     print("\nDecimal      Bit Octal Hexadecimal")
     for i in range(0, 50):
         print("-", end="")
     print()
+    # printout
     for i in range(256):
         print("{:7} {:08b} {:#05o} {:#04X}".format(i, i, i, i))
+    for i in range(0, 50):
+        print("=", end="")
 if __name__ == "__main__":
     main()

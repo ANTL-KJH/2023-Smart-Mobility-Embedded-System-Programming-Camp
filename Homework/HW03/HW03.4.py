@@ -16,12 +16,14 @@ def main():
     L = [5, 3, 8, 1, 2, 7, 0, 4, 6, 9]
     size = len(L)
     print("L (initial) = {}".format(L))
+
+    # selectom sorting
     for i in range(size - 1):
         min_idx = i
         for j in range(i + 1, size):
             if L[min_idx] > L[j]:
                 min_idx = j
-        if min_idx != i:
+        if min_idx != i:            # swap
             L[min_idx], L[i] = L[i], L[min_idx]
         print("round{:2} - L : {}".format(i, L))
 

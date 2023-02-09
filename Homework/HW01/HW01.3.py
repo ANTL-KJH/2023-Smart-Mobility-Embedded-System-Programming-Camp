@@ -6,13 +6,15 @@
 * 최초 프로그램 작성일 : 2023.02.06
 * ======================================================================================
 * 프로그램 수정 / 보완 이력
-* ===================================QQ===================================================
+* ======================================================================================
 * 프로그램 수정자		일자			버전		수정내용
 * JH KIM			2023.02.06	v1.0	최초 작성
 """
 import turtle
 
+
 def main():
+    # turtle initialize
     t = turtle.Turtle()
     t.shape("turtle")
     t.color("blue")
@@ -23,15 +25,27 @@ def main():
 
     print("Drawing a rectangle of width({}), length({}) ....".format(width, length))
 
-    t.up(); t.goto(-width/2, -length/2); t.down()
+    # goto start position
+    t.up()
+    t.goto(-width / 2, -length / 2)
+    t.down()
 
-    t.forward(width); t.left(90)
-    t.forward(length); t.left(90)
-    t.forward(width); t.left(90)
-    t.forward(length); t.left(90)
+    # draw
+    t.forward(width)
+    t.left(90)
+    t.forward(length)
+    t.left(90)
+    t.forward(width)
+    t.left(90)
+    t.forward(length)
+    t.left(90)
 
-    t.up(); t.home(); t.down()
+    # return to home
+    t.up()
+    t.home()
+    t.down()
     turtle.exitonclick()
+
 
 if __name__ == "__main__":
     main()
