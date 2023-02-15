@@ -1,7 +1,7 @@
 """
 * 프로젝트명 : Smart Mobility Embedded System Programming Camp HW06.5
 * 프로그램의 목적 및 기본 기능 :
-* -
+* -Matrix calculation with User defined module
 * 프로그램 작성자 : JH KIM
 * 최초 프로그램 작성일 : 2023.02.08
 * ======================================================================================

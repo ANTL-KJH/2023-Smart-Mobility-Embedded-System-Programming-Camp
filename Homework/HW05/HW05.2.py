@@ -13,6 +13,7 @@
 import random, time
 
 
+# merge Sorting
 def _merge(L_left, L_right):
     L_result = []
     i, j = 0, 0
@@ -30,6 +31,7 @@ def _merge(L_left, L_right):
         L_result.append(L_right[j])
         j += 1
     return L_result
+
 
 def _mergeSort(L):
     if len(L) < 2:
@@ -52,6 +54,7 @@ def mergeSort(L):
         L[i] = L_result[i]
 
 
+# Quick Sorting
 def _partition(arr, left, right, pi):
     pv = arr[pi]
     arr[pi], arr[right] = arr[right], arr[pi]
@@ -83,6 +86,7 @@ def quickSort(arr):
     _quickSortLoop(arr, left, right)
 
 
+# printout Samples
 def printListSample(L, per_line=10, sample_lines=2):
     count = 0
     size = len(L)
@@ -112,6 +116,7 @@ def printListSample(L, per_line=10, sample_lines=2):
                 break
 
 
+# Selection Sorting
 def selectionSort(L):
     size = len(L)
     for i in range(0, size - 1):
@@ -123,6 +128,7 @@ def selectionSort(L):
             L[min_idx], L[i] = L[i], L[min_idx]
 
 
+# Random List Generator
 def genRandList(L, size):
     for i in range(size):
         L.append(i)
@@ -137,6 +143,7 @@ def main():
         L = []
         genRandList(L, size)  # genRandList
 
+        # Selection Sorting
         # print("List (size : {}) before selection sorting : ".format(size))
         # printListSample(L, 10, 2)  # printout samples
         # t1 = time.time()  # time check
@@ -147,6 +154,7 @@ def main():
         # print("Selection sorting for list of {} integers took {} sec".format(size, t2 - t1))
         # random.shuffle(L)
 
+        # Merge Sorting
         print("List (size : {}) before merge sorting : ".format(size))
         printListSample(L, 10, 2)  # printout samples
         t1 = time.time()  # time check
@@ -157,6 +165,7 @@ def main():
         print("Merge sorting for list of {} integers took {} sec".format(size, t2 - t1))
         random.shuffle(L)
 
+        # Quick Sorting
         print("\nList (size : {}) before quick sorting : ".format(size))
         printListSample(L, 10, 2)  # printout samples
         t1 = time.time()  # time check

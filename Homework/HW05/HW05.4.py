@@ -10,7 +10,7 @@
 * 프로그램 수정자		일자			버전		수정내용
 * JH KIM			2023.02.08	v1.0	최초 작성
 """
-memo = dict()
+memo = dict()   # memo for dynamic programming
 
 
 def dynFibo(n):
